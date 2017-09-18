@@ -64,12 +64,12 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'port'   => 5432,
-	'hostname' => '172.30.52.16',
-	'username' => 'postgres',
-	'password' => 'Mytr@123',
+//	'port'   => 5432,
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'mytra_dashboard',
-	'dbdriver' => 'postgre',
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
     'pconnect' => FALSE,
     'db_debug' => (ENVIRONMENT !== 'production'),
