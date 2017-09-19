@@ -124,7 +124,7 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="export-event_booking">Download to EXCEL</a>
+                                        <li><a href="<?=base_url('export/booking_event_guards');?>">Download to EXCEL</a>
                                         </li>
                                         <li class="divider"></li>
                                         <li><a href="#">Separated link</a>

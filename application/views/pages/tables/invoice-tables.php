@@ -38,9 +38,9 @@
                                     <ul class="dropdown-menu pull-right" role="menu">
                                         <li><a href="<?=base_url('export/invoice'); ?>">Download to EXCEL</a>
                                         </li>
-                                        <li><a href="export-event_invoices">Download Event Guard Invoices EXCEL</a>
+                                        <li><a href="<?=base_url('export/invoice_event_guards'); ?>">Download Event Guard Invoices EXCEL</a>
                                         </li>
-                                        <li><a href="export-home_invoices">Download Home Guard Invoices EXCEL</a>
+                                        <li><a href="<?=base_url('export/invoice_home_guards'); ?>">Download Home Guard Invoices EXCEL</a>
                                         </li>
                                         <li class="divider"></li>
                                         <li><a href="#">Separated link</a>
