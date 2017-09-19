@@ -31,4 +31,35 @@ class Excel_export_model extends CI_Model
 	  $query3 = $this->db->get();
 	  return $query3->result();
 	}
+
+	function fetch_data_booking_event_guards()
+	{
+	  $this->db->select('*');
+	  $this->db->from('booking');
+	  $this->db->where("product_name = 'Event Guards'");
+	  
+	  $query = $this->db->get();
+	  return $query->result();
+	}
+
+	function fetch_data_invoice_home_guards()
+	{
+	  $this->db->select('*');
+	  $this->db->from('invoice');
+	  $this->db->where("product_name = 'Home Guards'");
+	  
+	  $query = $this->db->get();
+	  return $query->result();
+	}
+
+	function fetch_data_invoice_event_guards()
+	{
+	  $this->db->select('*');
+	  $this->db->from('invoice');
+	  $this->db->where("product_name = 'Event Guards'");
+	  
+	  $query = $this->db->get();
+	  return $query->result();
+	}
+
 }
