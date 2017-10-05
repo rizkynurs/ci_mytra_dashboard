@@ -1,4 +1,4 @@
-        <div id="page-wrapper">
+ <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard</h1>
@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div>
-                                            <?php $this->load->view('pages/dashboard/download-number'); ?>
+                                            <?php $this->load->view('pages/dashboard/customer-number'); ?>
                                         </div>
                                         <div>Downloads</div>
                                     </div>
@@ -219,6 +219,3 @@
     <script src="<?php echo base_url(); ?>assets/vendor/Chart/Chart.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/data/chart-data-hg.js"></script>
     <script src="<?php echo base_url(); ?>assets/data/chart-data-eg.js"></script>
-   
-
- 

@@ -1,22 +1,31 @@
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?=base_url();?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="<?=base_url();?>assets/vendor/metisMenu/metisMenu.min.js"></script>
-    
-     <!--Custom Theme JavaScript -->
-    <script src="<?=base_url();?>assets/dist/js/sb-admin-2.js"></script>
-    <script src="<?=base_url();?>assets/dist/js/scroll.js"></script>
 
-    <script src="<?=base_url();?>assets/vendor/Chart/Chart.bundle.js"></script>
-    <script src="<?=base_url();?>assets/vendor/Chart/Chart.bundle.min.js"></script>
-    <script src="<?=base_url();?>assets/vendor/Chart/Chart.js"></script>
-    <script src="<?=base_url();?>assets/vendor/Chart/Chart.min.js"></script>  
-    
-    <!--<script src="../dist/js/chart.min.js"></script>-->
+    <!--Load chart js-->
+    <script type="text/javascript" src="<?php echo base_url().'assets/js/chart.min.js'?>"></script>
+    <script>
+ 
+            var lineChartData = {
+                labels : <?php echo json_encode($date);?>,
+                datasets : [
+                     
+                    {
+                        fillColor: "rgba(60,141,188,0.9)",
+                        strokeColor: "rgba(60,141,188,0.8)",
+                        pointColor: "#3b8bba",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(152,235,239,1)",
+                        data : <?php echo json_encode($total);?>
+                    }
+ 
+                ]
+                 
+            }
+ 
+        var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+         
+    </script>
 
 
 </body>

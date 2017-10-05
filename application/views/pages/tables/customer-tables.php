@@ -69,8 +69,8 @@
                                 </tfoot>
                                 <tbody>
                                 <?php 
-
-                                    $query= $this->db->get('customer');
+                                    $this->load->database();
+                                    $query= $this->db->query("SELECT * FROM customer");
                                     foreach ($query->result() as $row) {
 
                                     /*============================Use Postgresql php=========================*/

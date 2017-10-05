@@ -22,7 +22,6 @@
             form.submit();
         }
         else{
-
         }
     }
     </script>

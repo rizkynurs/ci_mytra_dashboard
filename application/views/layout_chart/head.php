@@ -1,5 +1,5 @@
 <?php
-   $this->simple_login->cek_login();
+  // $this->simple_login->cek_login();
 
 ?>
 <!DOCTYPE html>
@@ -30,6 +30,18 @@
     <!-- Custom Fonts -->
     <link href="<?=base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">    
     
+
+  <?php
+        foreach($data as $data){
+            $date[] = $data->month;
+            $total[] = (float) $data->total;
+        }
+
+        foreach($data1 as $data1){
+            $dat[] = $data1->month;
+            $tota[] = (float) $data1->total;
+        }
+    ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
