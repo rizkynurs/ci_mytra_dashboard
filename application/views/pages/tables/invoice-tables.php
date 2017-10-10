@@ -38,9 +38,9 @@
                                     <ul class="dropdown-menu pull-right" role="menu">
                                         <li><a href="<?=base_url('export/invoice'); ?>">Download to EXCEL</a>
                                         </li>
-                                        <li><a href="export-event_invoices">Download Event Guard Invoices EXCEL</a>
+                                        <li><a href="<?=base_url('export/invoice_event_guards'); ?>">Download Event Guard Invoices EXCEL</a>
                                         </li>
-                                        <li><a href="export-home_invoices">Download Home Guard Invoices EXCEL</a>
+                                        <li><a href="<?=base_url('export/invoice_home_guards'); ?>">Download Home Guard Invoices EXCEL</a>
                                         </li>
                                         <li class="divider"></li>
                                         <li><a href="#">Separated link</a>
@@ -56,33 +56,31 @@
                                 <thead>
                                     <tr>
                                         <th>Number</th>
-                                        <th>Customer Name</th>
-                                        <th>Username</th>
-                                        <th>Customer Mobile</th>
-                                        <th>Customer Email</th>
                                         <th>Invoice Date</th>
                                         <th>Invoice Due Date</th>
-                                        <th>Booking Number</th>
                                         <th>Currency Code</th>
-                                        <th>Product</th>
                                         <th>Total</th>
+                                        <th>Booking Number</th>
+                                        <th>Product Name</th>
                                         <th>Status</th>
+                                        <th>Customer Name</th>
+                                        <th>Customer Mobile</th>
+                                        <th>Customer Email</th>
                                     </tr>
                                 </thead>    
                                 <tfoot>
                                     <tr>
                                         <th>Number</th>
-                                        <th>Customer Name</th>
-                                        <th>Username</th>
-                                        <th>Customer Mobile</th>
-                                        <th>Customer Email</th>
                                         <th>Invoice Date</th>
                                         <th>Invoice Due Date</th>
-                                        <th>Booking Number</th>
                                         <th>Currency Code</th>
-                                        <th>Product</th>
                                         <th>Total</th>
+                                        <th>Booking Number</th>
+                                        <th>Product Name</th>
                                         <th>Status</th>
+                                        <th>Customer Name</th>
+                                        <th>Customer Mobile</th>
+                                        <th>Customer Email</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
@@ -104,18 +102,16 @@
                                 ?>
                                     <tr class="odd gradeX">
                                         <td><?php echo $row->number; ?></td>
-                                        <td><?php echo $row->customer_name; ?></td>
-                                        <td><?php echo $row->account_username; ?></td>
-                                        <td><?php echo $row->customer_mobile; ?></td>
-                                        <td><?php echo $row->customer_email; ?></td>
                                         <td><?php echo $row->invoice_date; ?></td>
                                         <td><?php echo $row->invoice_duedate; ?></td>
-                                        <td><?php echo $row->booking_number; ?></td>
                                         <td><?php echo $row->currency_code; ?></td>
-                                        <td><?php echo $row->product_name; ?></td>
                                         <td><?php echo $row->total; ?></td>
+                                        <td><?php echo $row->booking_number; ?></td>
+                                        <td><?php echo $row->product_name; ?></td>
                                         <td><?php echo $row->status; ?></td>
-
+                                        <td><?php echo $row->customer_name; ?></td>
+                                        <td><?php echo $row->customer_mobile; ?></td>
+                                        <td><?php echo $row->customer_email; ?></td>
                                         
                                     </tr>
                                  <?php } ?>   
