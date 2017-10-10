@@ -15,7 +15,7 @@ class Tables extends CI_Controller
 	public function booking(){
 		$data = array(	'title'	=> 'Booking Tables Page',
 						'isi'	=> 'pages/tables/booking-tables');
-		$this->load->view('layout_booking/wrapper',$data);
+		$this->load->view('layout_customer/wrapper',$data);
 	}
 
 	public function invoice()
