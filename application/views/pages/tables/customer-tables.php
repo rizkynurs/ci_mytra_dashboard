@@ -54,6 +54,7 @@
                                 <thead>
                                     <tr> 
                                         <th>Name</th>
+                                        <th>Username</th>
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th>Mobile Phone</th>
@@ -62,6 +63,7 @@
                                 <tfoot>
                                     <tr>
                                         <th>Name</th>
+                                        <th>Username</th>
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th>Mobile Phone</th>
@@ -69,8 +71,8 @@
                                 </tfoot>
                                 <tbody>
                                 <?php 
-                                    $this->load->database();
-                                    $query= $this->db->query("SELECT * FROM customer");
+
+                                    $query= $this->db->get('customer');
                                     foreach ($query->result() as $row) {
 
                                     /*============================Use Postgresql php=========================*/
@@ -86,6 +88,7 @@
                                 ?>
                                     <tr> 
                                         <td><?php echo $row->name; ?></td>
+                                        <td><?php echo $row->username; ?></td>
                                         <td><?php echo $row->email; ?></td>
                                         <td><?php echo $row->phone; ?></td>
                                         <td><?php echo $row->mobile; ?></td>

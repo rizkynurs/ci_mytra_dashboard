@@ -50,27 +50,41 @@
                             <!-- <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example"> -->
                                  <thead>
                                     <tr>
-                                        <th class="center" align="center">ID</th>
+                                        <th class="center" align="center">Booking Number</th>
+                                        <th class="center" align="center">Name</th>
+                                        <th class="center" align="center">Username</th>
+                                        <th class="center" align="center">Mobile Phone</th>
+                                        <th class="center" align="center">Email</th>
                                         <th class="center" align="center">Address</th>
+                                        <th class="center" align="center">Location</th>
                                         <th class="center" align="center">PIC</th>
                                         <th class="center" align="center">Booking From</th>
                                         <th class="center" align="center">Booking Until</th>
                                         <th class="center" align="center">Quantity</th>
+                                        <th class="center" align="center">Product</th>
+                                        <th class="center" align="center">Partner</th>
+                                        <th class="center" align="center">Bank Name</th>
                                         <th class="center" align="center">Price</th>
-                                        <th class="center" align="center">Location</th>
                                         <th class="center" align="center">Status</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Booking Number</th>
+                                        <th>Name</th>
+                                        <th>Username</th>
+                                        <th>Mobile Phone</th>
+                                        <th>Email</th>
                                         <th>Address</th>
+                                        <th>Location</th>
                                         <th>PIC</th>
                                         <th>Booking From</th>
                                         <th>Booking Until</th>
                                         <th>Quantity</th>
+                                        <th>Product</th>
+                                        <th>Partner</th>
+                                        <th>Bank Name</th>
                                         <th>Price</th>
-                                        <th>Location</th>
                                         <th>Status</th>
                                     </tr>
                                 </tfoot>
@@ -91,14 +105,21 @@
 
                                 ?>
                                     <tr class="odd grad eX">
-                                        <td><?php echo $row->booking_id; ?></td>
+                                        <td><?php echo $row->booking_number; ?></td>
+                                        <td><?php echo $row->customer_name; ?></td>
+                                        <td><?php echo $row->username; ?></td>
+                                        <td><?php echo $row->customer_mobile; ?></td>
+                                        <td><?php echo $row->customer_email; ?></td>
                                         <td><?php echo $row->address; ?></td>
+                                        <td><?php echo $row->geolocation; ?></td>
                                         <td><?php echo $row->pic; ?></td>
                                         <td><?php echo $row->booking_from; ?></td>
                                         <td><?php echo $row->booking_until; ?></td>
                                         <td class="center" align="center"><?php echo $row->qty; ?></td>
+                                        <td><?php echo $row->product_name; ?></td>
+                                        <td><?php echo $row->partners_name; ?></td>
+                                        <td><?php echo $row->payment_name; ?></td>
                                         <td><?php echo $row->price; ?></td>
-                                        <td><?php echo $row->geolocation; ?></td>
                                         <td><?php echo $row->status; ?></td>
                                         
                                     </tr>
@@ -124,7 +145,7 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="<?=base_url('export/booking_event_guards');?>">Download to EXCEL</a>
+                                        <li><a href="export-event_booking">Download to EXCEL</a>
                                         </li>
                                         <li class="divider"></li>
                                         <li><a href="#">Separated link</a>
@@ -138,27 +159,41 @@
                             <table width="100%" class="display" id="example"  cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Booking Number</th>
+                                        <th>Name</th>
+                                        <th>Username</th>
+                                        <th>Mobile Phone</th>
+                                        <th>Email</th>
                                         <th>Address</th>
+                                        <th>Location</th>
                                         <th>PIC</th>
                                         <th>Booking From</th>
                                         <th>Booking Until</th>
                                         <th>Quantity</th>
+                                        <th>Product</th>
+                                        <th>Partner</th>
+                                        <th>Bank Name</th>
                                         <th>Price</th>
-                                        <th>Location</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Booking Number</th>
+                                        <th>Name</th>
+                                        <th>Username</th>
+                                        <th>Mobile Phone</th>
+                                        <th>Email</th>
                                         <th>Address</th>
+                                        <th>Location</th>
                                         <th>PIC</th>
                                         <th>Booking From</th>
                                         <th>Booking Until</th>
                                         <th>Quantity</th>
+                                        <th>Product</th>
+                                        <th>Partner</th>
+                                        <th>Bank Name</th>
                                         <th>Price</th>
-                                        <th>Location</th>
                                         <th>Status</th>
                                     </tr>
                                 </tfoot>
@@ -176,15 +211,22 @@
 
                                 ?>
                                     <tr class="odd grad eX">
-                                        <td><?php echo $row->booking_id; ?></td>
+                                        <td><?php echo $row->booking_number; ?></td>
+                                        <td><?php echo $row->customer_name; ?></td>
+                                        <td><?php echo $row->username; ?></td>
+                                        <td><?php echo $row->customer_mobile; ?></td>
+                                        <td><?php echo $row->customer_email; ?></td>
                                         <td><?php echo $row->address; ?></td>
+                                        <td><?php echo $row->geolocation; ?></td>
                                         <td><?php echo $row->pic; ?></td>
                                         <td><?php echo $row->booking_from; ?></td>
                                         <td><?php echo $row->booking_until; ?></td>
-                                        <td align="center"><?php echo $row->qty; ?></td>
+                                        <td class="center" align="center"><?php echo $row->qty; ?></td>
+                                        <td><?php echo $row->product_name; ?></td>
+                                        <td><?php echo $row->partners_name; ?></td>
+                                        <td><?php echo $row->payment_name; ?></td>
                                         <td><?php echo $row->price; ?></td>
-                                        <td><?php echo $row->geolocation; ?></td>
-                                        <td><?php echo $row->status; ?></td>  
+                                        <td><?php echo $row->status; ?></td> 
                                     </tr>
                                  <?php } ?>   
                                </tbody>
